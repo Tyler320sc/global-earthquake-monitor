@@ -16,8 +16,6 @@ ReactDOM.render(
             height: `400px`,
             width: `1233px`,
             marginTop: `100px`,
-            // marginLeft: `700px`,
-            // marginRight: `10`,
           }}
         />
       }
