@@ -21,7 +21,7 @@ const App = () => {
         tsunami: feature.properties.tsunami,
         felt: feature.properties.felt,
         lat: feature.geometry.coordinates[0],
-        long: feature.geometry.coordinates[1],
+        lng: feature.geometry.coordinates[1],
       };
     });
 
@@ -32,6 +32,6 @@ const App = () => {
     fetchData();
   }, []);
   console.log(earthquakeData);
-  return <Map isMarkerShown />;
+  return <Map earthquakeData={earthquakeData} />;
 };
 export default App;

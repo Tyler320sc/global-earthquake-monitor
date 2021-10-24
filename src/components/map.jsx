@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { compose, withProps } from "recompose";
 import {
   withScriptjs,
@@ -18,14 +18,37 @@ const Map = compose(
   }),
   withScriptjs,
   withGoogleMap
-)((props) => (
+)(({ earthquakeData }) => (
   <GoogleMap
     defaultZoom={2.5}
     defaultCenter={{ lat: 40.73061, lng: -73.935242 }}
   >
-    {props.isMarkerShown && (
-      <Marker position={{ lat: -34.397, lng: 150.644 }} />
-    )}
+    {earthquakeData.map((earthquake, index) => {
+      return (
+        <Circle
+          key={index}
+          center={{ lat: earthquake.lat, lng: earthquake.lng }}
+          radius={100000}
+          options={{
+            strokeColor: `red`,
+            fillColor: `red`,
+            fillOpacity: 0.2,
+            strokeWeight: 0,
+          }}
+        />
+      );
+    })}
+
+    {/* <Circle
+      center={{ lat: earthquakeData[0].lat, lng: earthquakeData[0].lng }}
+      radius={100000}
+      options={{
+        strokeColor: `red`,
+        fillColor: `red`,
+        fillOpacity: 0.2,
+        strokeWeight: 0,
+      }}
+    /> */}
     <Circle
       center={{ lat: 40.73061, lng: -73.935242 }}
       radius={100000}
