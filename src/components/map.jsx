@@ -28,8 +28,7 @@ const Map = compose(
         <Circle
           key={index}
           center={{ lat: earthquake.lat, lng: earthquake.lng }}
-          //   radius={earthquakeData[0].magnitude * 100000}
-          radius={-0.001}
+          radius={earthquake.magnitude * 50000}
           options={{
             strokeColor: `red`,
             fillColor: `red`,
