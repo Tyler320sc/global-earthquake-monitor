@@ -28,7 +28,8 @@ const Map = compose(
         <Circle
           key={index}
           center={{ lat: earthquake.lat, lng: earthquake.lng }}
-          radius={100000}
+          //   radius={earthquakeData[0].magnitude * 100000}
+          radius={-0.001}
           options={{
             strokeColor: `red`,
             fillColor: `red`,
@@ -38,7 +39,6 @@ const Map = compose(
         />
       );
     })}
-
     {/* <Circle
       center={{ lat: earthquakeData[0].lat, lng: earthquakeData[0].lng }}
       radius={100000}
@@ -49,16 +49,6 @@ const Map = compose(
         strokeWeight: 0,
       }}
     /> */}
-    <Circle
-      center={{ lat: 40.73061, lng: -73.935242 }}
-      radius={100000}
-      options={{
-        strokeColor: `red`,
-        fillColor: `red`,
-        fillOpacity: 0.2,
-        strokeWeight: 0,
-      }}
-    />
   </GoogleMap>
 ));
 
