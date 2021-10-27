@@ -1,12 +1,12 @@
 import React from "react";
 
-const Recent = ({ earthquakeData }) => {
+const Recent = ({ firstEarthquake }) => {
   //   console.log(`earthquakeData`, earthquakeData);
   return (
     <section>
       <h1>Most Recent Earthquake</h1>
       <h4>
-        {earthquakeData[0].place} {earthquakeData[0].magnitude} magnitude
+        {firstEarthquake.place} {firstEarthquake.magnitude} magnitude
       </h4>
     </section>
   );

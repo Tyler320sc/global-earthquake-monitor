@@ -47,7 +47,7 @@ const App = () => {
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-        <Recent earthquakeData={earthquakeData} />
+        <Recent firstEarthquake={earthquakeData[0]} />
       )}
     </>
   );
