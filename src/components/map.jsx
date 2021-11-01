@@ -35,6 +35,7 @@ const Map = compose(
             fillOpacity: 0.2,
             strokeWeight: 0,
           }}
+          onClick={() => console.log("Hello world!")}
         />
       );
     })}
