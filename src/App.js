@@ -3,10 +3,12 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Map from "./components/map";
 import Recent from "./components/Recent";
+import EarthquakeDetails from "./components/EarthquakeDetails";
 
 const App = () => {
   const [earthquakeData, setEarthquakeData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [selected, setSelected] = useState(null);
 
   const fetchData = async () => {
     setLoading(true);
@@ -43,11 +45,17 @@ const App = () => {
 
   return (
     <>
-      <Map earthquakeData={earthquakeData} />
+      <Map earthquakeData={earthquakeData} setSelected={setSelected} />
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-        <Recent firstEarthquake={earthquakeData[0]} />
+        <>
+          {selected ? (
+            <EarthquakeDetails earthquake={selected} />
+          ) : (
+            <Recent firstEarthquake={earthquakeData[0]} />
+          )}
+        </>
       )}
     </>
   );

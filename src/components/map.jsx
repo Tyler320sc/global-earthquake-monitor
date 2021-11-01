@@ -18,7 +18,7 @@ const Map = compose(
   }),
   withScriptjs,
   withGoogleMap
-)(({ earthquakeData }) => (
+)(({ earthquakeData, setSelected }) => (
   <GoogleMap
     defaultZoom={2.5}
     defaultCenter={{ lat: 40.73061, lng: -73.935242 }}
@@ -35,7 +35,7 @@ const Map = compose(
             fillOpacity: 0.2,
             strokeWeight: 0,
           }}
-          onClick={() => console.log("Hello world!")}
+          onClick={() => setSelected(earthquake)}
         />
       );
     })}
