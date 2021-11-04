@@ -14,7 +14,7 @@ const App = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
+        "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson"
       );
 
       const features = response.data.features.filter(
@@ -27,8 +27,8 @@ const App = () => {
           magnitude: feature.properties.mag,
           tsunami: feature.properties.tsunami,
           felt: feature.properties.felt,
-          lat: feature.geometry.coordinates[0],
-          lng: feature.geometry.coordinates[1],
+          lat: feature.geometry.coordinates[1],
+          lng: feature.geometry.coordinates[0],
         };
       });
       setEarthquakeData(earthquakes);

@@ -7,6 +7,7 @@ import {
   Marker,
   Circle,
 } from "react-google-maps";
+import moment from "moment";
 
 const Map = compose(
   withProps({
@@ -24,31 +25,38 @@ const Map = compose(
     defaultCenter={{ lat: 40.73061, lng: -73.935242 }}
   >
     {earthquakeData.map((earthquake, index) => {
+      const oneHrAgo = moment().subtract(1, "hours");
+      const withinHr = moment(earthquake.time).isAfter(oneHrAgo);
+
+      const oneDayAgo = moment().subtract(1, "days");
+      const withinDay = moment(earthquake.time).isAfter(oneDayAgo);
+
+      const oneWeekAgo = moment().subtract(7, "days");
+      const withinWeek = moment(earthquake.time).isAfter(oneWeekAgo);
+
+      const color = withinHr
+        ? "red"
+        : withinDay
+        ? "yellow"
+        : withinWeek
+        ? "purple"
+        : "green";
+
       return (
         <Circle
           key={index}
           center={{ lat: earthquake.lat, lng: earthquake.lng }}
           radius={earthquake.magnitude * 50000}
           options={{
-            strokeColor: `red`,
-            fillColor: `red`,
-            fillOpacity: 0.2,
+            strokeColor: color,
+            fillColor: color,
+            fillOpacity: 0.4,
             strokeWeight: 0,
           }}
           onClick={() => setSelected(earthquake)}
         />
       );
     })}
-    {/* <Circle
-      center={{ lat: earthquakeData[0].lat, lng: earthquakeData[0].lng }}
-      radius={100000}
-      options={{
-        strokeColor: `red`,
-        fillColor: `red`,
-        fillOpacity: 0.2,
-        strokeWeight: 0,
-      }}
-    /> */}
   </GoogleMap>
 ));
 

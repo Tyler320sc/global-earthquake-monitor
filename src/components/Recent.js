@@ -1,7 +1,6 @@
 import React from "react";
 
 const Recent = ({ firstEarthquake }) => {
-  //   console.log(`earthquakeData`, earthquakeData);
   return (
     <section>
       <h1>Most Recent Earthquake</h1>
