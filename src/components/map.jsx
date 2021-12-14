@@ -25,16 +25,18 @@ const Map = compose(
     defaultCenter={{ lat: 40.73061, lng: -73.935242 }}
   >
     {earthquakeData.map((earthquake, index) => {
-      const oneHrAgo = moment().subtract(1, "hours");
-      const withinHr = moment(earthquake.time).isAfter(oneHrAgo);
+      // Until map key added the following code is not needed
 
-      const oneDayAgo = moment().subtract(1, "days");
-      const withinDay = moment(earthquake.time).isAfter(oneDayAgo);
+      //   const oneHrAgo = moment().subtract(1, "hours");
+      //   const withinHr = moment(earthquake.time).isAfter(oneHrAgo);
 
-      const oneWeekAgo = moment().subtract(7, "days");
-      const withinWeek = moment(earthquake.time).isAfter(oneWeekAgo);
+      //   const oneDayAgo = moment().subtract(1, "days");
+      //   const withinDay = moment(earthquake.time).isAfter(oneDayAgo);
 
-      const color = "green";
+      //   const oneWeekAgo = moment().subtract(7, "days");
+      //   const withinWeek = moment(earthquake.time).isAfter(oneWeekAgo);
+
+      const color = "dodgerblue";
 
       //   const color = withinHr
       //     ? "red"
