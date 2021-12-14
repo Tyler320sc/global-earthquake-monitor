@@ -34,13 +34,15 @@ const Map = compose(
       const oneWeekAgo = moment().subtract(7, "days");
       const withinWeek = moment(earthquake.time).isAfter(oneWeekAgo);
 
-      const color = withinHr
-        ? "red"
-        : withinDay
-        ? "yellow"
-        : withinWeek
-        ? "purple"
-        : "green";
+      const color = "green";
+
+      //   const color = withinHr
+      //     ? "red"
+      //     : withinDay
+      //     ? "yellow"
+      //     : withinWeek
+      //     ? "purple"
+      //     : "green";
 
       return (
         <Circle

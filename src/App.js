@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import Map from "./components/map";
 import Recent from "./components/Recent";
 import EarthquakeDetails from "./components/EarthquakeDetails";
+import { FaGithub, FaTwitter } from "react-icons/fa";
 
 const App = () => {
   const [earthquakeData, setEarthquakeData] = useState([]);
@@ -69,9 +70,23 @@ const App = () => {
       <footer class="footer" style={{ backgroundColor: `#80ed99` }}>
         <div class="content has-text-centered is-primary">
           <p>
-            <strong>Global Earthquake Monitor</strong> by Tyler Carroll.
-            <a href="https://github.com/Tyler320sc"> github</a>.
-            <a href="https://twitter.com/home"> twitter</a>.
+            <strong>By Tyler Carroll 2021</strong>
+            <a href="https://github.com/Tyler320sc">
+              <FaGithub
+                style={{
+                  marginLeft: `25px`,
+                  marginRight: `25px`,
+                  color: `black`,
+                }}
+              />
+            </a>
+            <a href="https://twitter.com/home">
+              <FaTwitter
+                style={{
+                  color: `black`,
+                }}
+              />
+            </a>
           </p>
         </div>
       </footer>
