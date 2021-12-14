@@ -1,5 +1,6 @@
 import "./App.css";
 import axios from "axios";
+import "bulma/css/bulma.min.css";
 import React, { useState, useEffect } from "react";
 import Map from "./components/map";
 import Recent from "./components/Recent";
@@ -45,6 +46,14 @@ const App = () => {
 
   return (
     <>
+      <section class="hero is-small" style={{ backgroundColor: `#22577a` }}>
+        <div class="hero-body has-text-centered">
+          <p class="title is-1" style={{ color: `#f0f8ff` }}>
+            Global Earthquake Monitor
+          </p>
+        </div>
+      </section>
+
       <Map earthquakeData={earthquakeData} setSelected={setSelected} />
       {loading ? (
         <h1>Loading...</h1>
@@ -57,6 +66,15 @@ const App = () => {
           )}
         </>
       )}
+      <footer class="footer" style={{ backgroundColor: `#80ed99` }}>
+        <div class="content has-text-centered is-primary">
+          <p>
+            <strong>Global Earthquake Monitor</strong> by Tyler Carroll.
+            <a href="https://github.com/Tyler320sc"> github</a>.
+            <a href="https://twitter.com/home"> twitter</a>.
+          </p>
+        </div>
+      </footer>
     </>
   );
 };
