@@ -27,24 +27,22 @@ const Map = compose(
     {earthquakeData.map((earthquake, index) => {
       // Until map key added the following code is not needed
 
-      //   const oneHrAgo = moment().subtract(1, "hours");
-      //   const withinHr = moment(earthquake.time).isAfter(oneHrAgo);
+      const oneHrAgo = moment().subtract(1, "hours");
+      const withinHr = moment(earthquake.time).isAfter(oneHrAgo);
 
-      //   const oneDayAgo = moment().subtract(1, "days");
-      //   const withinDay = moment(earthquake.time).isAfter(oneDayAgo);
+      const oneDayAgo = moment().subtract(1, "days");
+      const withinDay = moment(earthquake.time).isAfter(oneDayAgo);
 
-      //   const oneWeekAgo = moment().subtract(7, "days");
-      //   const withinWeek = moment(earthquake.time).isAfter(oneWeekAgo);
+      const oneWeekAgo = moment().subtract(7, "days");
+      const withinWeek = moment(earthquake.time).isAfter(oneWeekAgo);
 
-      const color = "dodgerblue";
-
-      //   const color = withinHr
-      //     ? "red"
-      //     : withinDay
-      //     ? "yellow"
-      //     : withinWeek
-      //     ? "purple"
-      //     : "green";
+      const color = withinHr
+        ? "red"
+        : withinDay
+        ? "yellow"
+        : withinWeek
+        ? "blue"
+        : "green";
 
       return (
         <Circle
