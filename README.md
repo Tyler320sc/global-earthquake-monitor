@@ -19,6 +19,6 @@
 
 ### To investigate an earthquake just click on the marker and it's info will be rendered where the most recent earthquake typically is
 
-### To update map refresh page
+### To update map with new earthquakes refresh page
 
-## For questions or support feel free to email me at typrograms.238@gmail.com
+### For questions or support feel free to email me at typrograms.238@gmail.com
