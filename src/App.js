@@ -70,7 +70,7 @@ const App = () => {
       <footer class="footer" style={{ backgroundColor: `#80ed99` }}>
         <div class="content has-text-centered is-primary">
           <p>
-            <strong>By Tyler Carroll 2021</strong>
+            <strong>Made By Tyler Carroll 2021</strong>
             <a href="https://github.com/Tyler320sc">
               <FaGithub
                 style={{

@@ -42,7 +42,7 @@ const Map = compose(
         ? "yellow"
         : withinWeek
         ? "blue"
-        : "green";
+        : "green"; // 30 days
 
       return (
         <Circle
