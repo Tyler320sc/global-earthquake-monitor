@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/global-earthquake-monitor/static/css/main.a617e044.chunk.css",
+    "main.js": "/global-earthquake-monitor/static/js/main.42223e22.chunk.js",
+    "main.js.map": "/global-earthquake-monitor/static/js/main.42223e22.chunk.js.map",
+    "runtime-main.js": "/global-earthquake-monitor/static/js/runtime-main.93d26d54.js",
+    "runtime-main.js.map": "/global-earthquake-monitor/static/js/runtime-main.93d26d54.js.map",
+    "static/css/2.41953c31.chunk.css": "/global-earthquake-monitor/static/css/2.41953c31.chunk.css",
+    "static/js/2.360d9de9.chunk.js": "/global-earthquake-monitor/static/js/2.360d9de9.chunk.js",
+    "static/js/2.360d9de9.chunk.js.map": "/global-earthquake-monitor/static/js/2.360d9de9.chunk.js.map",
+    "static/js/3.501d516c.chunk.js": "/global-earthquake-monitor/static/js/3.501d516c.chunk.js",
+    "static/js/3.501d516c.chunk.js.map": "/global-earthquake-monitor/static/js/3.501d516c.chunk.js.map",
+    "index.html": "/global-earthquake-monitor/index.html",
+    "static/css/2.41953c31.chunk.css.map": "/global-earthquake-monitor/static/css/2.41953c31.chunk.css.map",
+    "static/css/main.a617e044.chunk.css.map": "/global-earthquake-monitor/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.360d9de9.chunk.js.LICENSE.txt": "/global-earthquake-monitor/static/js/2.360d9de9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.93d26d54.js",
+    "static/css/2.41953c31.chunk.css",
+    "static/js/2.360d9de9.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.42223e22.chunk.js"
+  ]
+}
